@@ -3,7 +3,7 @@
 Walks the vault, hashes every Markdown file, and (re-)embeds only what
 changed. A malformed file is logged and skipped, never fatal. The index is
 locked to one (embedding model, dimension) pair — see
-:func:`secondbrain.core.db.check_embedding_compat`.
+:func:`medronho.core.db.check_embedding_compat`.
 """
 
 import hashlib
@@ -13,15 +13,15 @@ import sqlite3
 
 from pydantic import BaseModel
 
-from secondbrain.core.db import (
+from medronho.core.db import (
     check_embedding_compat,
     drop_schema,
     init_schema,
     serialize_vector,
 )
-from secondbrain.core.settings import Settings
-from secondbrain.ingest.chunker import Chunk, chunk_markdown
-from secondbrain.ingest.embedder import Embedder
+from medronho.core.settings import Settings
+from medronho.ingest.chunker import Chunk, chunk_markdown
+from medronho.ingest.embedder import Embedder
 
 logger = logging.getLogger(__name__)
 

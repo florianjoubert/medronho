@@ -5,7 +5,7 @@ from pathlib import Path
 import pytest
 from pydantic import ValidationError
 
-from secondbrain.core.settings import Settings
+from medronho.core.settings import Settings
 
 from .conftest import make_settings
 

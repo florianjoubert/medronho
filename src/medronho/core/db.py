@@ -94,7 +94,7 @@ def init_schema(conn: sqlite3.Connection, *, dim: int) -> None:
 
 
 def drop_schema(conn: sqlite3.Connection) -> None:
-    """Drop all secondbrain tables (used by ``secondbrain index --rebuild``)."""
+    """Drop all medronho tables (used by ``medronho index --rebuild``)."""
     with conn:
         for table in ("vec_chunks", "chunks", "files", "index_meta"):
             conn.execute(f"DROP TABLE IF EXISTS {table}")
@@ -119,7 +119,7 @@ def check_embedding_compat(conn: sqlite3.Connection, *, model: str, dim: int) ->
     if (stored_model, stored_dim) != (model, dim):
         raise IndexCompatibilityError(
             f"Index was built with {stored_model}/{stored_dim}, current settings are "
-            f"{model}/{dim}. Re-index with: secondbrain index --rebuild"
+            f"{model}/{dim}. Re-index with: medronho index --rebuild"
         )
 
 

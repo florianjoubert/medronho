@@ -6,7 +6,7 @@ import sqlite3
 
 import pytest
 
-from secondbrain.core.db import (
+from medronho.core.db import (
     IndexCompatibilityError,
     check_embedding_compat,
     init_schema,
@@ -66,4 +66,4 @@ def test_meta_lock_records_then_rejects_mismatch(conn: sqlite3.Connection) -> No
     message = str(excinfo.value)
     assert f"nomic-embed-text/{DIM}" in message
     assert "other-model/512" in message
-    assert "secondbrain index --rebuild" in message
+    assert "medronho index --rebuild" in message

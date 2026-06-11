@@ -6,7 +6,7 @@ both are reached through the same client, selected by ``LLM_BASE_URL``.
 
 from openai import OpenAI
 
-from secondbrain.core.settings import Settings
+from medronho.core.settings import Settings
 
 
 def make_client(settings: Settings) -> OpenAI:

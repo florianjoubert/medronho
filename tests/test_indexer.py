@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pytest
 
-from secondbrain.core.db import IndexCompatibilityError, search_chunks
-from secondbrain.core.settings import Settings
-from secondbrain.ingest.indexer import index_vault
+from medronho.core.db import IndexCompatibilityError, search_chunks
+from medronho.core.settings import Settings
+from medronho.ingest.indexer import index_vault
 
 from .conftest import FakeEmbedder, make_settings
 
@@ -116,7 +116,7 @@ def test_meta_lock_blocks_model_change_and_rebuild_recovers(
     changed = make_settings(
         settings.vault_path, settings.db_path.parent, llm_embed_model="other-model"
     )
-    with pytest.raises(IndexCompatibilityError, match="secondbrain index --rebuild"):
+    with pytest.raises(IndexCompatibilityError, match="medronho index --rebuild"):
         index_vault(conn, changed, fake_embedder)
 
     stats = index_vault(conn, changed, fake_embedder, rebuild=True)

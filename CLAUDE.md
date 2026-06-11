@@ -51,7 +51,7 @@ See `docs/ARCHITECTURE.md` for details.
 Do not revisit these without an explicit discussion:
 
 - **Python ≥ 3.12**, managed with **uv** (no pip, no poetry). Single `pyproject.toml`.
-- **src/ layout**: code in `src/secondbrain/`, importable package.
+- **src/ layout**: code in `src/medronho/`, importable package.
 - **ruff** (lint + format), **pyright strict** (type checking). All code fully typed.
 - **pydantic v2** for data models; **pydantic-settings** for all configuration.
 - **FastMCP** (official MCP Python SDK) for the servers, stdio transport.
@@ -96,13 +96,13 @@ These are differentiating features of the project — treat them as such:
 ## Repository layout
 
 ```
-second-brain/
+medronho/
 ├── CLAUDE.md
 ├── README.md
 ├── pyproject.toml
 ├── .env.example
 ├── .github/workflows/ci.yml
-├── src/secondbrain/
+├── src/medronho/
 │   ├── core/          # settings, llm client, db connection
 │   ├── ingest/        # chunker, embedder, indexer
 │   └── servers/

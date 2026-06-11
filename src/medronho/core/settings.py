@@ -11,7 +11,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    """All runtime configuration for secondbrain.
+    """All runtime configuration for medronho.
 
     Attributes:
         vault_path: Directory containing the Markdown vault. Required.
@@ -22,7 +22,7 @@ class Settings(BaseSettings):
         llm_embed_model: Embedding model name.
         embed_dim: Vector dimension of ``llm_embed_model``. The index is locked
             to ``(llm_embed_model, embed_dim)``; changing either requires
-            ``secondbrain index --rebuild``.
+            ``medronho index --rebuild``.
         embed_document_prefix: Task prefix prepended to documents at embedding
             time (never stored). nomic-embed-text is trained with these
             prefixes; set to ``""`` for models that use none.

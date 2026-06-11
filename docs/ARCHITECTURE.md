@@ -70,7 +70,7 @@ own notes. The vault outlives every tool, including this one.
 
 ### Ingest pipeline
 
-`secondbrain.ingest` walks the vault, detects changed files (content hash stored
+`medronho.ingest` walks the vault, detects changed files (content hash stored
 in SQLite), splits them into chunks (heading-aware, with overlap), requests
 embeddings from the inference layer, and upserts vectors into sqlite-vec. It is:
 
@@ -78,7 +78,7 @@ embeddings from the inference layer, and upserts vectors into sqlite-vec. It is:
 - **Incremental**: only changed files are re-embedded.
 - **Tolerant**: a malformed file is logged and skipped, never fatal.
 
-Run manually (`uv run secondbrain index`) or scheduled (launchd/cron).
+Run manually (`uv run medronho index`) or scheduled (launchd/cron).
 
 ### mcp-notes
 
@@ -129,7 +129,7 @@ freelancer CRM is just one possible YAML file, kept outside the repo.
 
 ### Inference layer
 
-A single module (`secondbrain.core.llm`) builds an `openai.OpenAI` client from
+A single module (`medronho.core.llm`) builds an `openai.OpenAI` client from
 settings:
 
 | Variable | Default | Purpose |

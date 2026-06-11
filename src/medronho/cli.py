@@ -1,4 +1,4 @@
-"""Command-line interface (`secondbrain`)."""
+"""Command-line interface (`medronho`)."""
 
 import argparse
 import sys
@@ -6,16 +6,16 @@ from collections.abc import Sequence
 
 from pydantic import ValidationError
 
-from secondbrain.core.db import IndexCompatibilityError, connect
-from secondbrain.core.settings import Settings
-from secondbrain.ingest.embedder import OpenAIEmbedder
-from secondbrain.ingest.indexer import index_vault
+from medronho.core.db import IndexCompatibilityError, connect
+from medronho.core.settings import Settings
+from medronho.ingest.embedder import OpenAIEmbedder
+from medronho.ingest.indexer import index_vault
 
 
 def main(argv: Sequence[str] | None = None) -> int:
-    """Entry point for the ``secondbrain`` command."""
+    """Entry point for the ``medronho`` command."""
     parser = argparse.ArgumentParser(
-        prog="secondbrain",
+        prog="medronho",
         description="Local-first AI second brain.",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)

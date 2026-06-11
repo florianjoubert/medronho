@@ -7,8 +7,8 @@ from pathlib import Path
 
 import pytest
 
-from secondbrain.core.db import connect
-from secondbrain.core.settings import Settings
+from medronho.core.db import connect
+from medronho.core.settings import Settings
 
 # Each keyword maps to its own vector component (orthogonal base vectors), so
 # similarity is controllable: a query sharing a keyword with exactly one chunk

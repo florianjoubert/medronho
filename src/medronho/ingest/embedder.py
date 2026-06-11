@@ -15,8 +15,8 @@ from typing import Protocol
 
 from openai import OpenAI
 
-from secondbrain.core.llm import make_client
-from secondbrain.core.settings import Settings
+from medronho.core.llm import make_client
+from medronho.core.settings import Settings
 
 _BATCH_SIZE = 64
 

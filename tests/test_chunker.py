@@ -1,6 +1,6 @@
 """Tests for heading-aware Markdown chunking."""
 
-from secondbrain.ingest.chunker import chunk_markdown
+from medronho.ingest.chunker import chunk_markdown
 
 
 def test_empty_file_yields_no_chunks() -> None:

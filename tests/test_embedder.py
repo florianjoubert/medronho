@@ -5,7 +5,7 @@ from typing import cast
 
 from openai import OpenAI
 
-from secondbrain.ingest.embedder import OpenAIEmbedder
+from medronho.ingest.embedder import OpenAIEmbedder
 
 
 class _RecordingEmbeddingsAPI:
