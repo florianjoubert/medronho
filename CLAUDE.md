@@ -62,6 +62,9 @@ Do not revisit these without an explicit discussion:
 - **pytest** for tests; **GitHub Actions** CI (ruff + pyright + pytest) on every push.
 - **pre-commit** hooks mirroring CI.
 - License: **MIT**. Commits: **Conventional Commits** (`feat:`, `fix:`, `docs:`…).
+- **No AI attribution in commits.** Do not add `Co-Authored-By: Claude` (or any
+  AI co-author trailer) to commit messages. The public repo is a personal
+  showcase; commits are authored by Florian only. This may be revisited later.
 
 ## Code quality rules
 
